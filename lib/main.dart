@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'bloc/motel_cubit.dart';
-import 'bloc/tab_cubit.dart';
-import 'pages/home_page.dart';
-import 'repositories/motel_repository.dart';
+import 'injection_container.dart' as di;
+import 'presentation/bloc/motel_cubit.dart';
+import 'presentation/bloc/tab_cubit.dart';
+import 'presentation/pages/home_page.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  di.init();
   runApp(MyApp());
 }
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
       home: MultiBlocProvider(
         providers: [
           BlocProvider(
-            create: (context) => MotelCubit(MotelRepository())..fetchMoteis(),
+            create: (context) => di.sl<MotelCubit>()..fetchMoteis(),
           ),
           BlocProvider(
             create: (context) => TabStateCubit(),
