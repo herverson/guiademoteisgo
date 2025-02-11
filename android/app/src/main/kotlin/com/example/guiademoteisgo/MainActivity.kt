@@ -1,0 +1,5 @@
+package com.example.guiademoteisgo
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity()
