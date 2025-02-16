@@ -1,5 +1,11 @@
 # guiademoteisgo
 
+
+
+https://github.com/user-attachments/assets/5daa8ee9-5025-464d-b6fd-67023003ba6d
+
+
+
 Desafio técnico
 
 <h1>Documentação do Projeto - Guia de motéis Go</h1>
@@ -98,12 +104,6 @@ O projeto está organizado seguindo os princípios da **Clean Architecture**, qu
        - **`data/`**: Testes relacionados à camada de dados.
        - **`domain/`**: Testes relacionados à camada de domínio.
        - **`presentation/`**: Testes relacionados à camada de apresentação.
-
----
-
-#### 9. **`linux/` e `macos/`**
-   - **Configurações de Plataforma**:
-     - Contém arquivos de configuração específicos para as plataformas Linux e macOS.
 
 ---
 
